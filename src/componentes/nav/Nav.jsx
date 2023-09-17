@@ -39,27 +39,10 @@ const Nav = () => {
       <AppBar position="fixed" color="primary">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-                flexGrow: 10,
-              }}
+            {/* el menú delplegable */}
+            <Box
+              sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, mr: 1 }}
             >
-              LOGO
-            </Typography>
-
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -97,27 +80,29 @@ const Nav = () => {
               </Menu>
             </Box>
 
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-                flexGrow: 1,
-              }}
-            >
-              LOGO
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {/* logo */}
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "flex" } }}>
+              <AdbIcon />
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                href="/"
+                sx={{
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                  //flexGrow: 10,
+                }}
+              >
+                LOGO
+              </Typography>
+            </Box>
+
+            {/* opciones del nav */}
+            <Box sx={{ display: { xs: "none", md: "flex" }, mr: 5 }}>
               {pages.map((page) => (
                 <Button
                   key={page}
@@ -129,7 +114,8 @@ const Nav = () => {
               ))}
             </Box>
 
-            <Box sx={{ flexGrow: 1 }}>
+            {/* perfil */}
+            <Box sx={{ mr: 5 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
