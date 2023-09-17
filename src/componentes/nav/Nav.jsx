@@ -82,7 +82,6 @@ const Nav = () => {
 
             {/* logo */}
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "flex" } }}>
-              <AdbIcon />
               <Typography
                 variant="h6"
                 noWrap
@@ -97,7 +96,11 @@ const Nav = () => {
                   //flexGrow: 10,
                 }}
               >
-                LOGO
+                <Avatar
+                  sx={{ p: 0 }}
+                  alt="Remy Sharp"
+                  src="../../../image/store.jpg"
+                />
               </Typography>
             </Box>
 
