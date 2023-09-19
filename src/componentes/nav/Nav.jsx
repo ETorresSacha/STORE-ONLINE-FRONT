@@ -13,6 +13,8 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import "./nav.css";
+import Servicio from "./opcionesNav/Servicio";
+import { useRef } from "react";
 
 const pages = ["Inicio", "Servicios", "Nosotros", "Contacto"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -35,6 +37,15 @@ const Nav = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  //!
+  //SCROLL
+  const Servicios = useRef();
+
+  const scrollHnadler = (eleRef) => {
+    window.scrollTo({ top: eleRef.current.offsetTop, behavior: "smooth" });
+  };
+  //!
   return (
     <div className="conteiner-nav">
       <div>
@@ -106,12 +117,17 @@ const Nav = () => {
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 5 }}>
             {pages.map((page) => (
               <Button
+                //href={`#${page}`}
                 key={page}
-                onClick={handleCloseNavMenu}
+                //onClick={handleCloseNavMenu}
+                onClick={() => scrollHnadler("Servicios")}
                 sx={{ my: 2, color: "gris", display: "block" }}
               >
                 {page}
               </Button>
+              // <span>
+              //   <a href={`#${page}`}>{page}</a>
+              // </span>
             ))}
           </Box>
 
@@ -147,6 +163,8 @@ const Nav = () => {
           </Box>
         </Toolbar>
       </div>
+
+      {/* secciones para cada opción */}
     </div>
   );
 };

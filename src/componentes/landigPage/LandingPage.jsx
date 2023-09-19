@@ -26,25 +26,23 @@ const useStyles = makeStyles({
 const LandingPage = () => {
   const classes = useStyles();
   return (
-    <div className="conteiner-landing">
+    <div
+      className="conteiner-landing"
+      style={{ width: "100%", height: "100%" }}
+    >
       <Nav />
-      <h1>¡BIENVENIDO A SHOP!</h1>
-      <Typography
-        variant="h6"
-        noWrap
-        component="a"
-        sx={{
-          border: 2,
-          color: "white",
-          fontFamily: "cursive",
-        }}
-      >
+      <h1 className="title-landing">¡BIENVENIDO A SHOP!</h1>
+      <h4 className="h4-landing">
         Tu tienda favorita en donde encuentras lo que necesitas al alcance de tu
         disponibilidad y a tu disposición de tiempo.
-      </Typography>
+      </h4>
       <div className="btn-landig">
         <Button className={classes.root}>Ver mas</Button>
       </div>
+      <section
+        // ref={Servicios}
+        style={{ width: "100%", height: "100vh", background: "gray" }}
+      ></section>
       <Footer />
     </div>
   );

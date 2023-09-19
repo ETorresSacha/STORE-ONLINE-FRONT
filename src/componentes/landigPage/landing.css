@@ -8,6 +8,29 @@
 }
 .btn-landig{
     position: relative;
-    top: 460px;
-    left: 250px;
+    top: 15%;
+    left: 20%;
+}
+.title-landing{
+    width: 450px;
+    position: relative;
+    top: 8%;
+    left: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style:oblique;
+    font-size: 60px;
+    color:rgb(172, 15, 73);
+    text-shadow: 3px 3px 3px rgb(10, 10, 10)
+}
+.h4-landing{
+    width: 550px;
+    position: relative;
+    top: 8%;
+    left: 10%;
+    font-family:cursive;
+    font-size:medium;
+    font-size: 20px;
+    font-size: 20px;
+    color:rgb(205, 84, 84);
+    text-shadow: 2px 1px 1px rgb(10, 10, 10)
 }
