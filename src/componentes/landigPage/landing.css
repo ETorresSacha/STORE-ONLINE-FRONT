@@ -1,0 +1,13 @@
+.conteiner-landing{
+    background-image: url('../../../image/STORE2.png');
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn-landig{
+    position: relative;
+    top: 460px;
+    left: 250px;
+}
