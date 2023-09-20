@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { startOption } from "../../toolkit/slice";
+import KeyboardDoubleArrowUpRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowUpRounded";
 
 // const useStyles = makeStyles({
 //   root: {
@@ -28,24 +29,36 @@ const LandingPage = () => {
     if (option === "Inicio")
       return window.scrollTo({ top: 0, behavior: "smooth" });
     else if (option === "Servicios")
-      return window.scrollTo({ top: 680, behavior: "smooth" });
+      return window.scrollTo({ top: 745, behavior: "smooth" });
     else if (option === "Nosotros")
-      return window.scrollTo({ top: 1360, behavior: "smooth" });
+      return window.scrollTo({ top: 1490, behavior: "smooth" });
     else if (option === "Contacto")
-      return window.scrollTo({ top: 2040, behavior: "smooth" });
+      return window.scrollTo({ top: 2235, behavior: "smooth" });
 
     return () => dispatch(startOption(""));
   }, [option]);
+  useEffect(() => {}, []);
 
   return (
     <div>
       <section className="conteiner-landing">
         <Nav />
+
         <h1 className="title-landing">¡BIENVENIDO A SHOP!</h1>
         <h4 className="h4-landing">
           Tu tienda favorita en donde encuentras lo que necesitas al alcance de
           tu disponibilidad y a tu disposición de tiempo.
         </h4>
+        <KeyboardDoubleArrowUpRoundedIcon
+          fontSize="large"
+          sx={{
+            background: "red",
+            borderRadius: 5,
+            position: "absolute",
+            left: 600,
+            top: 500,
+          }}
+        />
         {/* <div className="btn-landig">
         <Button className={classes.root}>Ver mas</Button>
       </div> */}

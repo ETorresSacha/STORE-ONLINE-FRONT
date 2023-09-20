@@ -2,4 +2,14 @@
     background: transparent;
     backdrop-filter: blur(15px);
     box-shadow: 0 0 10px #2a2c2c9b, 0 0 10px #2a2c2c9b, 0 0 10px #2a2c2c9b;
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    position: fixed;
+    border: solid;
+
+  
+
+
 }
