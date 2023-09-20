@@ -12,14 +12,17 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { useDispatch, useSelector } from "react-redux";
 import "./nav.css";
 import Servicio from "./opcionesNav/Servicio";
 import { useRef } from "react";
+import { startOption } from "../../toolkit/slice";
 
 const pages = ["Inicio", "Servicios", "Nosotros", "Contacto"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Nav = () => {
+  const dispatch = useDispatch();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -43,7 +46,9 @@ const Nav = () => {
   const Servicios = useRef();
 
   const scrollHnadler = (eleRef) => {
-    window.scrollTo({ top: eleRef.current.offsetTop, behavior: "smooth" });
+    //console.log(eleRef);
+    //window.scrollTo({ top: eleRef.current.offsetTop, behavior: "smooth" });
+    dispatch(startOption(eleRef));
   };
   //!
   return (
@@ -120,8 +125,8 @@ const Nav = () => {
                 //href={`#${page}`}
                 key={page}
                 //onClick={handleCloseNavMenu}
-                onClick={() => scrollHnadler("Servicios")}
-                sx={{ my: 2, color: "gris", display: "block" }}
+                onClick={() => scrollHnadler(page)}
+                sx={{ my: 2, display: "block" }}
               >
                 {page}
               </Button>
@@ -130,6 +135,10 @@ const Nav = () => {
               // </span>
             ))}
           </Box>
+
+          {/* opciones del nav */}
+
+          <section ref={Servicios}>hola</section>
 
           {/* perfil */}
           <Box sx={{ mr: 5 }}>
