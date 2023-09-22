@@ -49,12 +49,18 @@ const Nav = () => {
   };
   //!
   return (
-    <div className="conteiner-nav">
-      <Toolbar>
+    <AppBar
+      position="fixed"
+      color="secondary"
+      sx={{
+        backdropFilter: "blur(20px)",
+        boxShadow: "-moz-initial",
+      }}
+    >
+      <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* el menú delplegable */}
         <Box
           sx={{
-            flexGrow: 1,
             display: { xs: "flex", md: "none" },
           }}
         >
@@ -96,17 +102,14 @@ const Nav = () => {
         </Box>
 
         {/* logo */}
-
         <Box
           sx={{
-            flexGrow: 1,
             display: { xs: "flex", md: "flex" },
             margin: 1,
-            border: "solid",
           }}
         >
           <Avatar
-            sx={{ p: 0, height: 50, width: 50 }}
+            sx={{ flexGrow: 1, p: 0, height: 50, width: 50 }}
             alt="Remy Sharp"
             src="../../../image/store.jpg"
           />
@@ -114,14 +117,18 @@ const Nav = () => {
 
         {/* opciones del nav */}
         <Box
-          sx={{ display: { xs: "none", md: "flex", border: "solid" }, mr: 5 }}
+          sx={{
+            display: { xs: "none", md: "flex" },
+            mr: 5,
+            marginLeft: "auto",
+          }}
         >
           {pages.map((page) => (
             <Button
               key={page}
               //onClick={handleCloseNavMenu}
               onClick={() => scrollHnadler(page)}
-              sx={{ my: 2, display: "block" }}
+              sx={{ my: 2, display: "block", color: "white" }}
             >
               {page}
             </Button>
@@ -159,7 +166,7 @@ const Nav = () => {
           </Menu>
         </Box>
       </Toolbar>
-    </div>
+    </AppBar>
   );
 };
 
