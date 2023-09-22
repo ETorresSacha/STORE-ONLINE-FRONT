@@ -7,7 +7,7 @@ const theme = createTheme({
       main: pink[300],
     },
     secondary: {
-      main: pink[500],
+      main: pink[800],
     },
   },
 });
