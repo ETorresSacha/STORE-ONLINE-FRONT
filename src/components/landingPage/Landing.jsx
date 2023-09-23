@@ -7,6 +7,7 @@ import { startOption } from "../../toolkit/slice";
 import KeyboardDoubleArrowUpRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowUpRounded";
 import Button from "@mui/material/Button";
 import { useRef } from "react";
+import Servicio from "./opcionesNav/Servicio";
 
 const LandingPage = () => {
   const Inicio = useRef();
@@ -102,7 +103,7 @@ const LandingPage = () => {
         ref={Servicios}
         style={{ width: "100%", height: "100vh", background: "gray" }}
       >
-        SERVICIO
+        <Servicio />
       </section>
       <section
         ref={Nosotros}
