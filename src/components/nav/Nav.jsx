@@ -41,13 +41,12 @@ const Nav = () => {
     setAnchorElUser(null);
   };
 
-  //!
   //SCROLL
 
   const scrollHnadler = (eleRef) => {
     dispatch(startOption(eleRef));
   };
-  //!
+
   return (
     <AppBar
       position="fixed"
@@ -94,7 +93,7 @@ const Nav = () => {
             }}
           >
             {pages.map((page) => (
-              <MenuItem key={page} onClick={handleCloseNavMenu}>
+              <MenuItem key={page} onClick={() => scrollHnadler(page)}>
                 <Typography textAlign="center">{page}</Typography>
               </MenuItem>
             ))}
