@@ -1,93 +1,55 @@
-
-.conteiner{
-    background-image: url('../../../image/STORE2.png'); 
-    width: 100%;
-    height: 100vh;
-max-width: 100%;
-min-width: 25%;
-position: fixed;
-background-size: cover; 
-background-position: center;  
-background-repeat: no-repeat;
-
-}
-.imagen{
-    width: 100%;
-}
-
-.conteiner-conteiner{
-    
-    background-image: url('../../../image/STORE1.png'); 
-     height: 100vh;
-    max-width: 100%;
-
-    background-repeat: no-repeat;
-     
-    background-attachment: fixed;
-    background-position: center;  
+*{
+    margin: 0;
+    padding: 0;
 }
 
 .conteiner-landing{
-    background-image: url('../../../image/STORE1.png'); 
-    width: 100%;
-    height: 100vh;
+    display:flex;
+    background-image: url('../../../image/STORE2.png'); 
     background-repeat: no-repeat;
     background-size: cover; 
-    background-attachment: fixed;
-    background-position: center;
-    
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 10%;
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    min-width: 25%;
+    background-position: center;  
 }
-.btn-landig{
-    position: absolute;
-    top: 15%;
-    left: 20%;
-}
-/* .conteiner-text{
-    backdrop-filter: blur(5px);
 
-} */
+.btn-landig:hover{
+    transform: scale(1.05);  
+    box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 30px;
+    background: transparent;
+}
+
 .title-landing{
-    width:40%;
-    position: absolute;
-    top: 18%;
-    left: 15%;
+    width:100%;
     font-family: 'Times New Roman', Times, serif;
     font-style:oblique;
-    font-size: 400%;
+    font-size: 300%;
     color:rgb(172, 15, 73);
     text-shadow: 3px 3px 3px rgb(10, 10, 10);
-   
 }
 
 .h4-landing{
-    width: 30%;
-    position: absolute;
-    top: 48%;
-    left: 15%;
+    margin: 5%;
+    justify-content: center;
+    width: 70%;
     font-family:cursive;
     font-size:medium;
-    font-size: 140%;
+    font-size: 130%;
     color:rgb(205, 84, 84);
     text-shadow: 2px 1px 1px rgb(10, 10, 10);
     backdrop-filter: blur(1px);
-
 }
-@media screen and (max-width:1050px) {
-    .title-landing{
-        top: 25%;
-        left: 15%;
-        width: 70%;
-        font-size: 200%;
-        border: solid;
-
+ @media screen and (max-width:1050px) {
+    .conteiner-text{
+        backdrop-filter: blur(5px);
     }
-    .h4-landing{
-        top: 40%;
-        left: 15%;
-        width: 70%;
-        font-size: 100%;
-        border: solid;  
-    }
-
-    
 }
