@@ -2,6 +2,7 @@ import React from "react";
 import "./servicio.css";
 
 const Servicio = () => {
+  const serviciosStore = [{}, {}, {}];
   return (
     <div className="conteiner-servicio">
       <h1> MIS SERVICIOS</h1>
