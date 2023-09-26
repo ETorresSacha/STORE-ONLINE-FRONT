@@ -8,6 +8,7 @@ import KeyboardDoubleArrowUpRoundedIcon from "@mui/icons-material/KeyboardDouble
 import Button from "@mui/material/Button";
 import { useRef } from "react";
 import Servicio from "./opcionesNav/Servicio";
+import SobreNosotros from "./opcionesNav/sobreNosotros";
 
 const LandingPage = () => {
   const Inicio = useRef();
@@ -105,11 +106,8 @@ const LandingPage = () => {
       >
         <Servicio />
       </section>
-      <section
-        ref={Nosotros}
-        style={{ width: "100%", height: "100vh", background: "green" }}
-      >
-        NOSOTROS
+      <section ref={Nosotros} style={{ width: "100%", height: "100vh" }}>
+        <SobreNosotros />
       </section>
       <section
         ref={Contacto}

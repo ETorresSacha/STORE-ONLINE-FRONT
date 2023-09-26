@@ -29,18 +29,6 @@ const Servicio = () => {
             </div>
           );
         })}
-        {/* <div className="car-servicio">
-          <img src="../../../../image/store.jpg" />
-          <h4>hola</h4>
-        </div>
-        <div className="car-servicio">
-          <img src="../../../../image/store.jpg" />
-          <h4>hola</h4>
-        </div>
-        <div className="car-servicio">
-          <img src="../../../../image/store.jpg" />
-          <h4>hola</h4>
-        </div> */}
       </div>
     </div>
   );
