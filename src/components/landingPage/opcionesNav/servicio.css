@@ -1,71 +1,59 @@
 .conteiner-servicio{
     display: flex;
+    background-image: url('../../../image/servicio.png'); 
+    background-repeat: no-repeat;
+    background-size: cover; 
     width: 100%;
     height: 100vh;
     border: solid blue;
     flex-direction: column;
     align-items: center;
-    justify-content:space-around
+    justify-content:space-evenly
 }
 .conteiner-car-servicio{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100vh;
-
-    /* grid-template-columns: 
-    repeat(auto-fit, 
-    minmax(150px, 1fr)); */
-    border: solid;
+    height: auto;
+    gap: 5px;
     align-items: center;
     justify-content:space-evenly;
-   
-    background-color: yellow;
- 
-
 }
 .car-servicio{
     overflow: hidden;
     border-radius: 20px;
-    width:25%;
-    height: 45%;;
+    width: 400px;
+    height: 430px;
     transform: perspective(6000px);
     border: solid red;
     justify-content:space-around;
-    
     box-shadow: 0 5px 15px;
     transition: 0.5s;
-
 }
-@media screen and (max-width:1050px) {
+
+
+@media screen and (max-width:1240px) {
     .car-servicio{
-        width: 250px;
+        width: auto;
         height: auto;
     }
 }
 
-@media screen and (max-width:750px) {
-    .car-servicio{
-        width: 150px;
-        height: auto;
-    }
-}
-
-/* .car-servicio:hover{
+.car-servicio:hover{
     transform: scale(1.05);
-} */
+    box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+    color: #ffffff;
+}
 .car-servicio img{
-
-
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-
 }
 
 .car-servicio h4 {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 45px;
     line-height: 45px;
     color: aliceblue;
     background: rgba(0, 0, 0, 0.626);
