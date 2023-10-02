@@ -97,12 +97,81 @@ const images = [
 ];
 
 const SobreNosotros = () => {
+  const description = [
+    {
+      title: "Nosotros",
+      contexto:
+        "Bienvenidos a Store, tu destino en línea para productos de alta calidad y servicio excepcional. Fundada en 2020, nuestra tienda nació de una pasión por la moda. Desde entonces, hemos trabajado incansablemente para ofrecer a nuestros clientes una experiencia de compra única y satisfactoria.",
+    },
+    {
+      title: "Misión",
+      contexto:
+        "En STORE, nuestra misión es simple pero poderosa: ofrecer a nuestros clientes productos de alta calidad que mejoren sus vidas. Estamos comprometidos en proporcionar una selección cuidadosamente curada de productos que inspiren, solucionen problemas y aporten alegría a tu día a día. Trabajamos incansablemente para ser tu fuente confiable de productos excepcionales y un servicio al cliente incomparable.",
+    },
+    {
+      title: "Visión",
+      contexto:
+        " En STORE, nuestra misión es simple pero poderosa: ofrecer a nuestros clientes productos de alta calidad que mejoren sus vidas. Estamos comprometidos en proporcionar una selección cuidadosamente curada de productos que inspiren, solucionen problemas y aporten alegría a tu día a día. Trabajamos incansablemente para ser tu fuente confiable de productos excepcionales y un servicio al cliente incomparable.",
+    },
+    {
+      title: "Valores",
+      contexto:
+        " En el corazón de todo lo que hacemos se encuentran nuestros valores fundamentales:",
+      items: [
+        {
+          valor: "Calidad",
+          texto:
+            "Creemos en la excelencia y nos esforzamos por ofrecer productos que cumplan y superen sus expectativas.",
+        },
+        {
+          valor: "Pasión",
+          texto:
+            "Estamos apasionados por lo que hacemos y por las comunidades a las que servimos.",
+        },
+        {
+          valor: "Innovación",
+          texto: "Buscamos constantemente nuevas formas de mejorar y crecer.",
+        },
+        {
+          valor: "Compromiso",
+          texto: "Compromiso: Tu satisfacción es nuestra máxima prioridad.",
+        },
+      ],
+    },
+  ];
+  const [estado, setEstado] = React.useState("");
+  const handleClick = (element) => {
+    setEstado(element);
+  };
+
+  const MostrarContenido = () => {
+    const result = description.filter((ele) => ele.title === estado);
+    console.log(result);
+    return (
+      <div>
+        <h2>{result[0]?.title}</h2>
+        <p>{result[0]?.contexto}</p>
+        <div>
+          {!result[0]?.items
+            ? ""
+            : result[0]?.items.map((element) => {
+                return (
+                  <li style={{ border: "solid", flexWrap: "wrap" }}>
+                    <h3>{element.valor}:</h3> <h5>{element.texto}</h5>
+                  </li>
+                );
+              })}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
-      <img
+      {/* <img
         src="../../../../image/portada-nosotros.jpg"
         style={{ width: "100%", backdropFilter: "blur(100px)" }}
-      />
+      /> */}
       <Box
         sx={{
           display: "flex",
@@ -131,6 +200,7 @@ const SobreNosotros = () => {
                   pt: 2,
                   pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
                 }}
+                onClick={() => handleClick(image.title)}
               >
                 {image.title}
                 <ImageMarked className="MuiImageMarked-root" />
@@ -139,8 +209,10 @@ const SobreNosotros = () => {
           </ImageButton>
         ))}
       </Box>
+      <MostrarContenido />
 
-      <div>
+      {/* <div>
+        <Button disabled={false}> hola</Button>
         <h2>Nosotros</h2>
         <p>
           Bienvenido a STORE, tu destino en línea para productos de alta calidad
@@ -187,7 +259,7 @@ const SobreNosotros = () => {
             prioridad.
           </li>
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };
