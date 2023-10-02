@@ -106,7 +106,14 @@ const LandingPage = () => {
       >
         <Servicio />
       </section>
-      <section ref={Nosotros} style={{ width: "100%", height: "100vh" }}>
+      <section
+        ref={Nosotros}
+        style={{
+          width: "100%",
+          height: "100vh",
+          justifyContent: "center",
+        }}
+      >
         <SobreNosotros />
       </section>
       <section
