@@ -41,6 +41,7 @@
 .car-servicio:hover{
     transform: scale(1.05);
     box-shadow: 0 0 10px #d09ed5, 0 0 40px #d09ed5, 0 0 80px #d09ed5;
+
     color: #d09ed5;
 }
 .car-servicio img{
