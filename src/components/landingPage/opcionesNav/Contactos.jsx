@@ -1,89 +1,72 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+
 import FormControl, { useFormControl } from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import FormHelperText from "@mui/material/FormHelperText";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { styled } from "@mui/material/styles";
+import Stack from "@mui/material/Stack";
+import { purple } from "@mui/material/colors";
 
 const Contactos = () => {
-  function MyFormHelperText() {
-    const { focused } = useFormControl() || {};
-
-    const helperText = React.useMemo(() => {
-      if (focused) {
-        return "";
-      }
-
-      return "Ingrese un mensaje";
-    }, [focused]);
-
-    return <FormHelperText>{helperText}</FormHelperText>;
-  }
+  const ColorButton = styled(Button)(({ theme }) => ({
+    color: theme.palette.getContrastText(purple[500]),
+    backgroundColor: purple[500],
+    "&:hover": {
+      backgroundColor: purple[700],
+    },
+  }));
   return (
     <div
       style={{
-        width: "100%",
-        height: "100vh",
         display: "flex",
         justifyContent: "center",
         padding: "20px",
-        border: "solid",
-        backgroun: "red",
       }}
     >
       <div
         style={{
-          margin: "10px",
-          background: "blue",
+          background: "white",
           display: "flex",
+          flexDirection: "column",
+          flexWrap: "wrap",
           justifyContent: "center",
-          width: "50%",
+          alignItems: "center",
+          borderRadius: "20px",
+          margin: "5px",
         }}
       >
-        <Box
-          sx={{
-            "& > :not(style)": { m: 1 },
-            border: "solid",
-            width: "100%",
-
-            //gridAutoRows: "minmax(100px, auto)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            background: "yelow",
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(2,minmax(150px,1fr))",
+            gridGap: "10px",
+            gridAutoRows: "minmax(80px, auto)",
+            margin: "15px",
           }}
-          noValidate
-          autoComplete="off"
         >
-          <TextField
-            sx={{ width: "40%" }}
-            label="Nombre"
-            color="secondary"
-            focused
-          />
-          <TextField
-            sx={{ width: "40%" }}
-            label="Apellido"
-            color="secondary"
-            focused
-          />
-          <TextField
-            sx={{ width: "40%" }}
-            label="Correo"
-            color="secondary"
-            focused
-          />
-          <TextField
-            sx={{ width: "30%" }}
-            label="Celular"
-            color="secondary"
-            focused
-          />
-          <FormControl sx={{ width: "70%" }}>
-            <OutlinedInput placeholder="Please enter text" />
-            <MyFormHelperText />
-          </FormControl>
-        </Box>
+          <TextField id="outlined-basic" label="Nombre" variant="outlined" />
+          <TextField id="outlined-basic" label="Apellido" variant="outlined" />
+          <TextField id="outlined-basic" label="Correo" variant="outlined" />
+          <TextField id="outlined-basic" label="Celular" variant="outlined" />
+        </div>
+
+        <TextField
+          sx={{ width: "90%" }}
+          id="outlined-multiline-flexible"
+          label="Mensaje"
+          multiline
+          rows={4}
+          column={2}
+        />
+        <ColorButton
+          sx={{ width: "90%", padding: "15px", margin: "15px" }}
+          variant="contained"
+        >
+          Enviar
+        </ColorButton>
       </div>
     </div>
   );
