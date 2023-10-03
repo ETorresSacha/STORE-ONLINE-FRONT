@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import { useRef } from "react";
 import Servicio from "./opcionesNav/Servicio";
 import SobreNosotros from "./opcionesNav/sobreNosotros";
+import Contactos from "./opcionesNav/Contactos";
 
 const LandingPage = () => {
   const Inicio = useRef();
@@ -118,9 +119,9 @@ const LandingPage = () => {
       </section>
       <section
         ref={Contacto}
-        style={{ width: "100%", height: "100vh", background: "blue" }}
+        style={{ width: "100%", height: "100vh", background: "green" }}
       >
-        CONTACTO
+        <Contactos />
       </section>
 
       {/* Boton para volver al Top = 0 */}
