@@ -10,6 +10,7 @@ import { useRef } from "react";
 import Servicio from "./opcionesNav/Servicio";
 import SobreNosotros from "./opcionesNav/sobreNosotros";
 import Contactos from "./opcionesNav/Contactos";
+import Footer from "../footer/Footer";
 
 const LandingPage = () => {
   const Inicio = useRef();
@@ -139,6 +140,7 @@ const LandingPage = () => {
           />
         </Button>
       )}
+      <Footer />
     </div>
   );
 };
