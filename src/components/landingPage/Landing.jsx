@@ -10,8 +10,11 @@ import { useRef } from "react";
 import Servicio from "./opcionesNav/Servicio";
 import SobreNosotros from "./opcionesNav/sobreNosotros";
 import Contactos from "./opcionesNav/Contactos";
+import Footer from "../footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
   const Inicio = useRef();
   const Servicios = useRef();
   const Nosotros = useRef();
@@ -59,7 +62,6 @@ const LandingPage = () => {
     const handleScroll = () => {
       if (window.scrollY > 632) {
         setShow(true);
-        console.log("estamos aqui");
       } else {
         setShow(false);
       }
@@ -94,6 +96,7 @@ const LandingPage = () => {
               height: 48,
               padding: "0 30px",
             }}
+            onClick={() => navigate(`/home`)}
           >
             Ver mas
           </Button>
@@ -139,6 +142,7 @@ const LandingPage = () => {
           />
         </Button>
       )}
+      <Footer />
     </div>
   );
 };
