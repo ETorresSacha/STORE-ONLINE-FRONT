@@ -18,6 +18,55 @@ const Home = () => {
     setProduct(data);
   };
 
+  const imagenPort = [
+    {
+      id: 2,
+      title: "Polos ",
+      image:
+        "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    },
+    {
+      id: 3,
+      title: "Casacas",
+      image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+    },
+    {
+      id: 4,
+      title: "Chompas",
+      image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    },
+    {
+      id: 15,
+      title: "Poleras",
+      image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+    },
+    {
+      id: 16,
+      title: "Chompas",
+      image: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+    },
+    {
+      id: 17,
+      title: "Camisas",
+      image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+    },
+    {
+      id: 18,
+      title: "Jeans ",
+      image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+    },
+    {
+      id: 19,
+      title: "Pantalones",
+      image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+    },
+    {
+      id: 20,
+      title: "Vestidos",
+      image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+    },
+  ];
+
   useEffect(() => {
     productAll();
   }, []);
@@ -50,11 +99,35 @@ const Home = () => {
         style={{
           width: "100%",
           height: "14%",
+          display: "flex",
+          gap: "15px",
+          justifyContent: "center",
+          padding: "20px",
 
           background: "#ffe9e9",
         }}
       >
-        VISUALIZAR CATEGORIAS
+        {imagenPort?.map((element, index) => {
+          return (
+            <Card
+              sx={{
+                maxWidth: "70px",
+                boxShadow:
+                  "3px 3px 2px #3d3d3d, 2px 2px 1px #3d3d3d, 0 0 1px #3d3d3d;",
+                borderRadius: "350px 350px 350px 0px",
+              }}
+              key={index}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  image={element.image}
+                  alt="green iguana"
+                />
+              </CardActionArea>
+            </Card>
+          );
+        })}
       </div>
       <div
         style={{
@@ -69,8 +142,10 @@ const Home = () => {
             <Card
               sx={{
                 maxWidth: 345,
-                boxShadow: "2px 2px 2px",
+                boxShadow:
+                  "3px 3px 2px #3d3d3d, 2px 2px 1px #3d3d3d, 0 0 1px #3d3d3d;",
                 borderRadius: "10px",
+                ///border: "solid #d9d8d8",
               }}
               key={index}
             >
