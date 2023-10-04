@@ -22,8 +22,10 @@
 .btn-landig:hover{
     transform: scale(1.05);  
     box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+
     cursor: pointer;
     color: #ffffff;
+
     border-radius: 30px;
     background: transparent;
 }
