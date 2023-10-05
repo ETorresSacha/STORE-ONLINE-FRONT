@@ -18,7 +18,7 @@ const Home = () => {
   const [product, setProduct] = useState();
 
   const productAll = async () => {
-    const { data } = await axios("https://fakestoreapi.com/products");
+    const { data } = await axios("http://localhost:3000/clothes");
     setProduct(data);
   };
 
