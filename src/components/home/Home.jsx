@@ -9,6 +9,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import TuneIcon from "@mui/icons-material/Tune";
+import Logo from "../nav/opcionesNav/Logo";
+import PerfilUsuario from "../nav/opcionesNav/PerfilUsuario";
 
 const Home = () => {
   const [product, setProduct] = useState();
@@ -50,21 +53,6 @@ const Home = () => {
       title: "Camisas",
       image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
     },
-    {
-      id: 18,
-      title: "Jeans ",
-      image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-    },
-    {
-      id: 19,
-      title: "Pantalones",
-      image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
-    },
-    {
-      id: 20,
-      title: "Vestidos",
-      image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
-    },
   ];
 
   useEffect(() => {
@@ -84,25 +72,36 @@ const Home = () => {
       }}
     >
       <div style={{ width: "100%", height: "9%" }}>
-        <Nav />
+        <Nav logo={<Logo />} perfilUsuario={<PerfilUsuario />} />
       </div>
+
+      {/* filtros */}
       <div
         style={{
           width: "100%",
           height: "10%",
           background: "#aa6e6e",
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          color: "#ffeded",
         }}
       >
-        filtros
+        <Typography>HOMBRE</Typography>
+        <Typography>MUJER</Typography>
+        <Typography>NIÑO</Typography>
+        <TuneIcon />
       </div>
+
+      {/* categorias */}
       <div
         style={{
           width: "100%",
-          height: "14%",
+          height: "15%",
           display: "flex",
-          gap: "15px",
+          gap: "35px",
           justifyContent: "center",
-          padding: "20px",
+          padding: "25px",
 
           background: "#ffe9e9",
         }}
@@ -125,6 +124,16 @@ const Home = () => {
                   alt="green iguana"
                 />
               </CardActionArea>
+              <Typography
+                sx={{
+                  position: "absolute",
+                  top: "31%",
+                }}
+                variant="body2"
+                color="text.secondary"
+              >
+                {element.title}
+              </Typography>
             </Card>
           );
         })}
