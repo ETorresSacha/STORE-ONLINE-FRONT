@@ -12,6 +12,7 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import TuneIcon from "@mui/icons-material/Tune";
 import Logo from "../nav/opcionesNav/Logo";
 import PerfilUsuario from "../nav/opcionesNav/PerfilUsuario";
+import Search from "../nav/opcionesNav/Search";
 
 const Home = () => {
   const [product, setProduct] = useState();
@@ -72,7 +73,11 @@ const Home = () => {
       }}
     >
       <div style={{ width: "100%", height: "9%" }}>
-        <Nav logo={<Logo />} perfilUsuario={<PerfilUsuario />} />
+        <Nav
+          logo={<Logo />}
+          perfilUsuario={<PerfilUsuario />}
+          search={<Search />}
+        />
       </div>
 
       {/* filtros */}
