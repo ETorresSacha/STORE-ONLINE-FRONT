@@ -9,10 +9,10 @@ const Nav = ({ logo, optionNavigate, search, perfilUsuario }) => {
   return (
     <AppBar
       position="fixed"
-      color="secondary"
       sx={{
         backdropFilter: "blur(20px)",
         boxShadow: "-moz-initial",
+        background: "rgba(203, 175, 189, 0.632)",
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
@@ -22,6 +22,7 @@ const Nav = ({ logo, optionNavigate, search, perfilUsuario }) => {
         {/* OPCIONES PARA NAVEGAR */}
         {optionNavigate}
 
+        {/* SEARCH */}
         {search}
 
         {/* LOGIN DEL USUARIO */}
