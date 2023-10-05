@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 
 import "./nav.css";
 
-const Nav = ({ logo, optionNavigate, perfilUsuario }) => {
+const Nav = ({ logo, optionNavigate, search, perfilUsuario }) => {
   return (
     <AppBar
       position="fixed"
@@ -21,6 +21,8 @@ const Nav = ({ logo, optionNavigate, perfilUsuario }) => {
 
         {/* OPCIONES PARA NAVEGAR */}
         {optionNavigate}
+
+        {search}
 
         {/* LOGIN DEL USUARIO */}
 
