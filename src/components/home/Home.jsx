@@ -59,7 +59,8 @@ const Home = () => {
   useEffect(() => {
     productAll();
   }, []);
-  console.log(product);
+
+  const handleLandingPage = () => {};
 
   return (
     <div
