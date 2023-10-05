@@ -10,9 +10,10 @@ const Nav = ({ logo, optionNavigate, search, perfilUsuario }) => {
     <AppBar
       position="fixed"
       sx={{
-        backdropFilter: "blur(20px)",
+        backdropFilter: "blur(10px)",
         boxShadow: "-moz-initial",
-        background: "rgba(203, 175, 189, 0.632)",
+        background: "transparent",
+        //background: "rgba(203, 175, 189, 0.632)",
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
