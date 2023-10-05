@@ -156,7 +156,7 @@ const Home = () => {
           return (
             <Card
               sx={{
-                maxWidth: 345,
+                maxWidth: 250,
                 boxShadow:
                   "3px 3px 2px #3d3d3d, 2px 2px 1px #3d3d3d, 0 0 1px #3d3d3d;",
                 borderRadius: "10px",
