@@ -12,6 +12,8 @@ import SobreNosotros from "./opcionesNav/sobreNosotros";
 import Contactos from "./opcionesNav/Contactos";
 import Footer from "../footer/Footer";
 import { useNavigate } from "react-router-dom";
+import Logo from "../nav/opcionesNav/Logo";
+import OptionsNavigate from "../nav/opcionesNav/OptionsNavigate";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -23,6 +25,9 @@ const LandingPage = () => {
   const dispatch = useDispatch();
 
   const { option } = useSelector((state) => state.clothes);
+
+  // Opciones del Nav
+  const optionsNav = ["Inicio", "Servicios", "Nosotros", "Contacto"];
 
   // Scroll to section
   useEffect(() => {
@@ -76,7 +81,11 @@ const LandingPage = () => {
     <div>
       {/* Inicio */}
       <section ref={Inicio} className="conteiner-landing">
-        <Nav />
+        <Nav
+          logo={<Logo />}
+          optionNavigate={<OptionsNavigate optionsNav={optionsNav} />}
+        />
+
         <div className="conteiner-text">
           <h1 className="title-landing">¡BIENVENIDO A SHOP!</h1>
           <h4 className="h4-landing">
