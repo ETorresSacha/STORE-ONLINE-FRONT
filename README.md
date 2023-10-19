@@ -1,4 +1,7 @@
 # React + Vite
+## TIENDA ONLINE
+![image](https://github.com/ETorresSacha/STORE-ONLINE-FRONT/assets/122553836/a37f2cdf-2279-4e94-9626-eb188367b82c)
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
